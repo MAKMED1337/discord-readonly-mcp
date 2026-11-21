@@ -15,7 +15,7 @@ package = false
 
 [tool.mypy]
 strict = true
-files = ["server.py", "join_guild.py"]
+files = ["server.py", "join_guild.py", "list_servers.py"]
 
 [dependency-groups]
 dev = [
