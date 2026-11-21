@@ -27,8 +27,11 @@ have their own channel IDs; they are readable through their server's entry.
    DISCORD_ALLOWED_CHANNELS=123456789012345678,234567890123456789
    ```
 
-4. Register the server. `uv` loads `.env` on each launch, so the client config
-   holds no secrets:
+4. Run `./install.sh [path]` (default: current directory) to register the server
+   globally with your coding agents through [add-mcp](https://www.npmjs.com/package/add-mcp).
+   It asks which agents to use; pass `-a claude-code -a codex -y` to skip the prompt.
+   To register manually instead: `uv` loads `.env` on each launch, so the client config
+   holds no secrets.
 
    ```sh
    claude mcp add discord-read-only -- uv run --locked --env-file /absolute/path/to/discord-read-only/.env --directory /absolute/path/to/discord-read-only python server.py
